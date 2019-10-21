@@ -27,6 +27,10 @@ body {
 }
 
 .container {
+	@include r(1279) {
+		padding: 0 20px;
+	}
+
 	max-width: 1180px;
 	margin: 0 auto;
 }
@@ -83,6 +87,10 @@ a {
 }
 
 h2 {
+	@include r(767) {
+		font-size: 26px;
+	}
+
 	text-transform: uppercase;
 	font-size: 40px;
 	font-weight: 500;
@@ -90,6 +98,10 @@ h2 {
 	margin-bottom: 53px;
 
 	span {
+		@include r(767) {
+			font-size: 22px;
+		}
+
 		font-size: 30px;
 	}
 }
@@ -102,12 +114,20 @@ h2 {
 	z-index: 1;
 
 	.container {
+		@include r(767) {
+			display: block;
+		}
+
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 
 	&__logo {
+		@include r(767) {
+			margin-bottom: 20px;
+		}
+
 		display: flex;
 		align-items: center;
 
@@ -122,19 +142,56 @@ h2 {
 	}
 
 	&__addr {
+		@include r(1279) {
+			margin-right: 15px;
+		}
+
+		@include r(1023) {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+
 		font-size: 16px;
 		font-weight: 300;
 		margin-right: 125px;
 	}
+
+	&__right {
+		@include r(1023) {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
 }
 
 .main {
+	@include r(1023) {
+		background: #f4f2f3;
+	}
+
+	@include r(767) {
+		padding-top: 230px;
+		padding-bottom: 60px;
+	}
+
+
 	background: url('../img/main.jpg') no-repeat center;
 	background-size: cover;
 	padding: 171px 0 133px;
 	position: relative;
 
+	&__info {
+		@include r(767) {
+			text-align: center;
+		}
+	}
+
 	.scroll {
+		@include r(1023) {
+			display: none;
+		}
+
 		position: absolute;
 		bottom: 2px;
 		left: 50%;
@@ -159,11 +216,19 @@ h2 {
 	}
 
 	&__title {
+		@include r(767) {
+			display: block;
+		}
+
 		display: flex;
 		align-items: center;
 		margin-bottom: 6px;
 
 		span {
+			@include r(767) {
+				font-size: 28px;
+			}
+
 			text-transform: uppercase;
 			font-size: 37px;
 			font-weight: bold;
@@ -171,6 +236,12 @@ h2 {
 			display: inline-block;
 
 			&:last-child {
+				@include r(767) {
+					font-size: 60px;
+					margin: 0;
+					display: block;
+				}
+
 				font-size: 100px;
 				margin-left: 24px;
 			}
@@ -184,6 +255,11 @@ h2 {
 	}
 
 	&__price {
+		@include r(767) {
+			display: block;
+			margin-bottom: 40px;
+		}
+
 		display: flex;
 		align-items: center;
 		margin-bottom: 154px;
@@ -208,6 +284,11 @@ h2 {
 	}
 
 	.new {
+		@include r(767) {
+			font-size: 60px;
+			margin: 20px 0 0;
+		}
+
 		color: #fff;
 		display: inline-block;
 		margin-left: 51px;
@@ -225,24 +306,44 @@ h2 {
 }
 
 .why {
+	@include r(767) {
+		padding-bottom: 40px;
+	}
+
 	padding: 73px 0;
 }
 
 .icons {
+	@include r(767) {
+		display: block;
+	}
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
 	&__item {
+		@include r(767) {
+			margin-bottom: 15px;
+		}
+
 		display: flex;
 		align-items: center;
 
 		svg {
+			@include r(1023) {
+				font-size: 25px;
+			}
+
 			margin-right: 28px;
 			font-size: 43px;
 		}
 
 		span {
+			@include r(1279) {
+				font-size: 14px;
+			}
+
 			font-size: 18px;
 			font-weight: bold;
 
@@ -254,23 +355,48 @@ h2 {
 }
 
 .use {
+	@include r(767) {
+		padding: 45px 0;
+	}
+
 	background-color: #f4f4f4;
 	padding: 90px 0;
 	border-top: 3px solid #dadada;
 	margin-top: 29px;
 
 	h2 {
+		@include r(1279) {
+			font-size: 35px;
+		}
+
+		@include r(767) {
+			font-size: 27px;
+		}
+
 		font-size: 50px;
 		margin-bottom: 57px;
 	}
 
 	&__list {
+		@include r(1023) {
+			display: block;
+		}
+
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
 	&__item {
+		@include r(1023) {
+			width: 100%;
+		}
+
+		@include r(767) {
+			display: block;
+			text-align: center;
+		}
+
 		width: 49%;
 		margin-bottom: 20px;
 		display: flex;
@@ -279,6 +405,11 @@ h2 {
 		background: #fff;
 
 		svg {
+			@include r(767) {
+				margin: 0 0 10px;
+				font-size: 45px;
+			}
+
 			font-size: 61px;
 			fill: #fad385;
 			margin-right: 40px;
@@ -293,6 +424,10 @@ h2 {
 	}
 
 	&__title {
+		@include r(1279) {
+			font-size: 17px;
+		}
+
 		font-weight: bold;
 		font-size: 20px;
 		margin-bottom: 20px;
@@ -311,6 +446,10 @@ h2 {
 }
 
 .steps {
+	@include r(767) {
+		padding: 45px 0;
+	}
+
 	color: #fff;
 	background: url('../img/texture.jpg') no-repeat center;
 	background-size: cover;
@@ -318,11 +457,23 @@ h2 {
 	text-align: center;
 
 	h2 {
+		@include r(1279) {
+			font-size: 35px;
+		}
+
+		@include r(767) {
+			font-size: 25px;
+		}
+
 		font-size: 49px;
 		margin-bottom: 73px;
 	}
 
 	svg {
+		@include r(1023) {
+			margin-right: 15px;
+		}
+
 		fill: #fad385;
 		font-size: 32px;
 		margin-right: 39px;
@@ -337,6 +488,12 @@ h2 {
 	}
 
 	p {
+		@include r(767) {
+			br {
+				display: none;
+			}
+		}
+
 		text-align: center;
 		font-size: 12px;
 	}
@@ -348,6 +505,10 @@ h2 {
 }
 
 .what {
+	@include r(767) {
+		padding: 45px 0;
+	}
+
 	padding: 86px 0 56px;
 
 	.container {
@@ -362,6 +523,15 @@ h2 {
 		margin-top: 96px;
 
 		img {
+			@include r(1023) {
+				margin: 0 20px 45px;
+			}
+
+			@include r(767) {
+				height: 46px;
+				margin: 0 7px 26px;
+			}
+
 			margin: 0 30px 45px;
 
 			&:first-child {
@@ -371,11 +541,19 @@ h2 {
 	}
 
 	h2 {
+		@include r(1279) {
+			font-size: 35px;
+		}
+
 		font-size: 50px;
 		margin-bottom: 77px;
 	}
 
 	.usb {
+		@include r(1279) {
+			display: none;
+		}
+
 		position: absolute;
 		top: 138px;
 		right: 0;
@@ -384,6 +562,12 @@ h2 {
 	}
 
 	p {
+		@include r(1023) {
+			br {
+				display: none;
+			}
+		}
+
 		font-size: 16px;
 		font-weight: 30;
 		margin-bottom: 59px;
@@ -396,21 +580,51 @@ h2 {
 }
 
 .license {
+	@include r(767) {
+		padding: 45px 0;
+	}
+
 	text-align: center;
 	background-color: #f4f4f4;
 	padding: 97px 0;
 
 	h2 {
+		@include r(1279) {
+			font-size: 35px;
+		}
+
+		@include r(767) {
+			font-size: 26px;
+		}
+
+		@include r(767) {
+			line-height: 1.2;
+		}
+		
 		font-size: 50px;
 		line-height: 0.8;
 		margin-bottom: 62px;
 	}
 
 	p {
+		@include r(1023) {
+			br {
+				display: none;
+			}
+		}
+
+		@include r(767) {
+			font-size: 16px;
+		}
+
 		font-size: 18px;
 	}
 
 	.slider {
+		@include r(767) {
+			display: block;
+		}
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -418,6 +632,14 @@ h2 {
 
 		.slide {
 			&:nth-child(2) {
+				@include r(1023) {
+					margin: 0 4%;
+				}
+
+				@include r(767) {
+					margin: 20px 0;
+				}
+
 				margin: 0 100px;
 			}
 		}
@@ -429,14 +651,31 @@ h2 {
 }
 
 .form {
+	@include r(1023) {
+		padding-bottom: 40px;
+	}
+
 	background: url('../img/form.jpg') no-repeat center;
 	background-size: cover;
 	padding: 62px 0 0;
 
 	.container {
+		@include r(1023) {
+			display: block;
+		}
+
 		display: flex;
+		align-items: flex-end;
 
 		img {
+			@include r(1279) {
+				width: 295px;
+			}
+
+			@include r(1023) {
+				display: none;
+			}
+
 			margin-right: 47px;
 			pointer-events: none;
 			user-select: none;
@@ -451,12 +690,24 @@ h2 {
 		margin-bottom: 22px;
 
 		span {
+			@include r(1279) {
+				font-size: 27px;
+			}
+
 			font-weight: bold;
 			font-size: 32px;
 		}
 	}
 
 	&__desc {
+		@include r(1279) {
+			font-size: 16px;
+		}
+
+		@include r(767) {
+			white-space: normal;
+		}
+
 		font-size: 23px;
 		color: #fff;
 		margin-bottom: 11px;
@@ -508,12 +759,20 @@ textarea {
 	padding: 90px 0 0;
 
 	h2 {
+		@include r(1279) {
+			font-size: 35px;
+		}
+
 		font-size: 50px;
 		margin-bottom: 28px;
 	}
 }
 
 #map {
+	@include r(767) {
+		height: 300px;
+	}
+
 	height: 31vw;
 }
 
@@ -521,6 +780,10 @@ textarea {
 	padding: 56px 0;
 
 	.container {
+		@include r(1023) {
+			display: block;
+		}
+
 		display: flex;
 		justify-content: space-between;
 	}
@@ -530,13 +793,25 @@ textarea {
 		line-height: 1.8;
 
 		&.center {
+			@include r(1023) {
+				text-align: left;
+			}
+
 			text-align: center;
 			margin-bottom: 0;
 		}
 	}
 
 	&__col {
+		@include r(1023) {
+			margin-bottom: 30px;
+		}
+
 		&:last-child {
+			@include r(1023) {
+				text-align: left;
+			}
+
 			text-align: right;
 		}
 	}
@@ -716,6 +991,13 @@ textarea {
 	margin-bottom: 40px;
 
 	a {
+		@include r(767) {
+			width: 50%;
+			text-align: center;
+			margin: 0;
+			font-size: 12px;
+		}
+
 		font-size: 18px;
 		text-transform: uppercase;
 		color: #6d6d6d;
